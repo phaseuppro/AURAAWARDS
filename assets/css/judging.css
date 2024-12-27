@@ -1,0 +1,191 @@
+.aura-judging-dashboard {
+    display: flex;
+    gap: 20px;
+    height: calc(100vh - 100px);
+}
+
+.aura-judging-thumbnails {
+    flex: 0.5;
+    overflow-y: auto;
+    max-height: 100%;
+    border: 1px solid #ddd;
+    padding: 10px;
+    background: #f9f9f9;
+}
+
+.aura-judging-thumbnails img.thumbnail {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border 0.3s;
+    object-fit: contain;
+}
+
+.aura-judging-thumbnails img.thumbnail.active,
+.aura-judging-thumbnails img.thumbnail:hover {
+    border: 2px solid #007cba;
+}
+
+.aura-judging-main {
+    flex: 2.5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ddd;
+    background: #fff;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.aura-judging-main img {
+    max-width: 100%;
+    max-height: calc(100vh - 200px);
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+
+#photo-details {
+    margin-top: 15px;
+    font-size: 16px;
+    color: #666;
+}
+
+.aura-judging-controls {
+    flex: 1;
+    padding: 15px;
+    border: 1px solid #ddd;
+    background: #f7f7f7;
+    overflow-y: auto;
+}
+
+
+/* Align rating stars beside the label */
+.rating-stars {
+    display: inline-flex;
+    gap: 10px;
+    margin-left: 30px;
+    margin-bottom: 20px;
+}
+
+.rating-stars label {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+}
+
+.rating-stars span {
+    font-size: 36px;
+    color: #ccc;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.rating-stars span.active {
+    color: #ff9900;
+}
+
+/* Arrange buttons in a grid layout */
+#badge-panel {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+#badge-panel h4 {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#badge-panel button {
+    flex: 1 1 calc(50% - 10px);
+    padding: 15px;
+    font-size: 16px;
+    background: #007cba;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+#badge-panel button:hover {
+    background: #005a99;
+}
+
+#badge-panel button.active {
+    background: #005f8c;
+}
+
+#judge-save {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    padding: 15px;
+    background: #28a745;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+#judge-save:hover {
+    background: #218838;
+}
+
+#reject-submission {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    background: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px;
+}
+
+#reject-submission:hover {
+    background: #c82333;
+}
+
+.jury-points-badge {
+    margin-top: 20px;
+    padding: 10px;
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+    text-align: center;
+    font-size: 18px;
+    color: #333;
+    border-radius: 5px;
+}
+
+.jury-points-badge .badge {
+    font-weight: bold;
+    color: #007cba;
+}
+
+.badge-preview {
+    position: absolute;
+    z-index: 100;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+#selected-photo {
+    position: relative;
+}

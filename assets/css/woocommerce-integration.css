@@ -1,0 +1,71 @@
+.aura-submissions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Retain grid layout */
+    gap: 20px;
+    padding: 20px;
+}
+
+.submission-item {
+    border: 1px solid inherit; /* Use theme's border color */
+    border-radius: 8px;
+    overflow: hidden;
+    background: inherit; /* Use theme's background color */
+    box-shadow: inherit; /* Use theme's shadow if provided */
+    transition: transform 0.2s;
+}
+
+.submission-item:hover {
+    transform: translateY(-2px); /* Retain hover functionality */
+}
+
+.submission-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.submission-details {
+    padding: 15px;
+}
+
+.submission-details h3 {
+    margin: 0 0 10px;
+    font-size: inherit; /* Use theme font size */
+    color: inherit; /* Use theme text color */
+}
+
+.ratings-display {
+    background: inherit; /* Use theme's background */
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.rating-row {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+    font-size: inherit; /* Inherit theme font size */
+}
+
+.rating-row span {
+    color: inherit; /* Use theme text color */
+}
+
+.aura-credits-dashboard {
+    background: inherit; /* Theme-controlled background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: inherit; /* Use theme's shadow */
+}
+
+.credits-summary {
+    background: inherit; /* Use theme's background */
+    padding: 15px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.credits-summary p {
+    margin: 5px 0;
+    font-size: inherit; /* Inherit theme font size */
+}
